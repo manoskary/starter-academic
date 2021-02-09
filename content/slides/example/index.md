@@ -1,10 +1,10 @@
 ---
 title: Slides
-summary: An introduction to using Wowchemy's Slides feature.
-authors: []
-tags: []
+summary: On Performance Similarity and Structure Segmentation.
+authors: [Emmanouil Karystinaios]
+tags: Department of Computational Perception
 categories: []
-date: "2019-02-05T00:00:00Z"
+date: "2021-02-05T00:00:00Z"
 slides:
   # Choose a theme from https://github.com/hakimel/reveal.js#theming
   theme: black
@@ -13,18 +13,33 @@ slides:
   highlight_style: dracula
 ---
 
-# Create slides in Markdown with Wowchemy
+## On Performance Similarity and Structure Segmentation
 
-[Wowchemy](https://wowchemy.com/) | [Documentation](https://owchemy.com/docs/managing-content/#create-slides)
+[Emmanouil Karystinaios](emmanouil-karystinaios.netify.app) | [article](emmanouil-karystinaios.netify.app)
+
+<!-- [Wowchemy](https://wowchemy.com/) | [Documentation](https://owchemy.com/docs/managing-content/#create-slides) -->
 
 ---
 
-## Features
+## Introduction
 
-- Efficiently write slides in Markdown
-- 3-in-1: Create, Present, and Publish your slides
-- Supports speaker notes
-- Mobile friendly slides
+Our objective is to find a way to quantify similarity of performances for which we have a matched score.
+But first, we have to answer the following questions :
+- What is performance similarity
+- How to measure siilarity in match scores?
+- Which similarity metric to use ?
+- Why measure performance similarity?
+- What elements affect our perception of performance similarity?
+
+---
+
+## Self-Similarity Matrices
+
+The concept of self-similarity matrices is fundamental for
+capturing structural properties of music recordings. Generally,
+one starts with a feature space L containing the elements of
+the feature sequence under consideration as well as with a
+similarity measure $f : \mathcal{L} \times \mathcal{L} \to \mathbb{R}$.
 
 ---
 
@@ -42,6 +57,33 @@ slides:
 
 ---
 
+## Interval Vectors
+
+**_Definition_**
+: An interval vector is an array of natural numbers which summarize the intervals present in a set of pitch classes. There is an equivalence between complementary intervals within the octave for example $2^{nd}$ minor and $7^{nth}$ major intervals, etc.
+
+Examples :
+- Any Major chord : $ [0, 0, 1, 1, 1, 0 ] $
+- Any Minor chord : $ [0, 0, 1, 1, 1, 0 ] $
+
+---
+### Interval Vectors and Cadences
+
+|      **Typical Cadences**			|  			|
+|---								|---		|
+| $\textrm{V}$ & - & $\textrm{I}$ 	| authentic |
+|$\textrm{I}$ & - &  $\textrm{V}$ 	| half 		|
+|$\textrm{IV}$ & - & $\textrm{I}$ 	| plagal 	|
+|$\textrm{V}$  & - & $\textrm{VI}$ 	| deceptive |
+
+
+Interval Vectors are commutative, i.e. $\textrm{V} \to \textrm{I} = \textrm{I} \to \textrm{V} $:
+- $ (\textrm{V/I})_{maj} = [1, 2, 2, 2, 3, 0] $
+- $ (\textrm{V/I})_{min} = [2, 1, 2, 3, 2, 0] $ 
+
+
+---
+
 ## Code Highlighting
 
 Inline code: `variable`
@@ -55,15 +97,30 @@ if porridge == "blueberry":
 
 ---
 
-## Math
-
-In-line math: $x + y = z$
-
-Block math:
-
+For every window $w_i^j$ we compute the interval vector of all notes in thye window/ Therefore, $\textrm{Int\_Vec}(w_i^j)\in \mathbb{N}^6$.
 $$
-f\left( x \right) = \;\frac{{2\left( {x + 4} \right)\left( {x - 4} \right)}}{{\left( {x + 4} \right)\left( {x + 1} \right)}}
+\mathcal(W) = \sum_{i=1}^N\sum_{j=1}^\nu \textrm{Int\_Vec}(w_i^j)
 $$
+Then, let $\mathcal{X}$ be some matrix decomposition of $\mathcal{W}$. The SSM $\mathcal{S}$ of $\mathcal{X}$ is:
+$$ 
+\mathcal{S} = \frac{\mathcal{X} \cdot \mathcal{X}}{\| \mathcal{X} \|^2}
+$$
+
+---
+
+## Test
+
+
+\begin{tikzpicture}
+  \matrix (m) [matrix of math nodes,row sep=3em,column sep=4em,minimum width=2em]
+  {
+     F & B \\
+      & A \\};
+  \path[-stealth]
+    (m-1-1) edge node [above] {$\beta$} (m-1-2)
+    (m-1-2) edge node [right] {$\rho$} (m-2-2)
+    (m-1-1) edge node [left] {$\alpha$} (m-2-2);
+\end{tikzpicture}
 
 ---
 
@@ -129,7 +186,7 @@ Press the `S` key to view the speaker notes!
 
 ---
 
-{{< slide background-image="/media/boards.jpg" >}}
+{{< slide background-image="blue_background.jpg" >}}
 
 ## Custom Slide
 

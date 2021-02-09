@@ -1,23 +1,26 @@
 ---
-title: "An example conference paper"
+title: "Music genre descriptor for classification based on Tonnetz trajectories"
 
 # Authors
 # If you created a profile for a user (e.g. the default `admin` user), write the username (folder name) here 
 # and it will be replaced with their full name and linked to their profile.
 authors:
 - admin
-- Robert Ford
+- Corentin Guichaoua
+- Moreno Andreatta
+- Louis Bigo
+- Isabelle Bloch
 
 # Author notes (optional)
-author_notes:
-- "Equal contribution"
-- "Equal contribution"
+-- author_notes:
+- ""
+- ""
 
-date: "2013-07-01T00:00:00Z"
-doi: ""
+date: "2020-11-30T00:00:00Z"
+doi: "hal-03031287"
 
 # Schedule page publish date (NOT publication's date).
-publishDate: "2017-01-01T00:00:00Z"
+publishDate: "2020-11-30T00:00:00Z"
 
 # Publication type.
 # Legend: 0 = Uncategorized; 1 = Conference paper; 2 = Journal article;
@@ -26,13 +29,13 @@ publishDate: "2017-01-01T00:00:00Z"
 publication_types: ["1"]
 
 # Publication name and optional abbreviated publication name.
-publication: In *Wowchemy Conference*
-publication_short: In *ICW*
+publication: In *Journées Informatiques Musicales*
+publication_short: In *JIM*
 
-abstract: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.
+abstract: Dans cet article, nous présentons un nouveau descripteur pour la classification automatique du style musical. Notre méthode consiste à définir une trajectoire harmonique dans un espace géométrique, le Tonnetz, puis à la résumer à ses valeurs de centralité, qui constituent les descripteurs. Ceux-ci, associés à des descripteurs classiques, sont utilisés comme caractéristiques pour la classification. Les résultats montrent des scores F 1 supérieurs à 0,8 avec une méthode classique de forêts aléatoires pour 8 classes (une par compositeur), et supérieurs à 0,9 pour une classification en 4 classes de style ou période de composition.
 
 # Summary. An optional shortened abstract.
-summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum.
+summary:  In this article, we propose a new approach for stylistic music classification, driven by chord material. we present a novel approach without vocabulary restrictions on the chord material but rather an evaluation of the total harmonic content following closely Louis Bigo's apporach on trajectories in generic simplicial complexes.
 
 tags: []
 
@@ -41,8 +44,8 @@ featured: true
 
 # Custom links (uncomment lines below)
 # links:
-# - name: Custom Link
-#   url: http://example.org
+# - name: HAL
+#   url: https://hal.archives-ouvertes.fr/hal-03031287/document
 
 url_pdf: ''
 url_code: ''
@@ -66,14 +69,14 @@ image:
 #   E.g. `internal-project` references `content/project/internal-project/index.md`.
 #   Otherwise, set `projects: []`.
 projects:
-- example
+- []
 
 # Slides (optional).
 #   Associate this publication with Markdown slides.
 #   Simply enter your slide deck's filename without extension.
 #   E.g. `slides: "example"` references `content/slides/example/index.md`.
 #   Otherwise, set `slides: ""`.
-slides: example
+slides: ""
 ---
 
 {{% callout note %}}
