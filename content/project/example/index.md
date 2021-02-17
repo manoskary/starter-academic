@@ -1,15 +1,17 @@
 ---
-title: Example Project
-summary: An example of using the in-built project page.
+title: Symbolic Music Structural Analysis using Self-Similarity Matrices
+summary: This is an introduction to structural segmentation of symbolic music using Self-Similarity matrices.
 tags:
-- Deep Learning
+- Music Structure Analysis
+- Music Information Retrieval
+- Self-Similarity
 date: "2016-04-27T00:00:00Z"
 
 # Optional external URL for project (replaces project detail page).
 external_link: ""
 
 image:
-  caption: Photo by rawpixel on Unsplash
+  caption: 
   focal_point: Smart
 
 links:
