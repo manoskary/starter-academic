@@ -59,9 +59,9 @@ social:
 # Link to a PDF of your resume/CV.
 # To use: copy your resume to `static/media/resume.pdf`, enable `ai` icons in `params.toml`, 
 # and uncomment the lines below.
-# - icon: cv
-#   icon_pack: ai
-#   link: media/resume.pdf
+- icon: cv
+  icon_pack: ai
+  link: media/resume.pdf
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: "emmanouil.karystinaios@jku.at"
@@ -74,4 +74,4 @@ Emmanouil Karystinaios is a Ph.D. Student of artificial intelligence at the Comp
 
 His past and current work includes, Trajectories in the Tonnetz, Structural Segmentation, and Similarity Metrics for Piano Performances.
 
-{{< icon name="download" pack="fas" >}} Download my {{< staticref "media/demo_resume.pdf" "newtab" >}}resumé{{< /staticref >}}.
+{{< icon name="download" pack="fas" >}} Download my {{< staticref "media/CV_Emmanouil_Karystinaios(En).pdf" "newtab" >}}resumé{{< /staticref >}}.
