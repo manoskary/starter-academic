@@ -14,3 +14,14 @@
 
 [context.branch-deploy]
   command = "hugo --gc --minify -b $DEPLOY_PRIME_URL"
+  
+[[plugins]]
+package = "netlify-plugin-rss"
+  [plugins.inputs]
+  # required configs, customize as needed
+  dirToScan = "/post" # a subfolder to scan. "/" to scan all
+  authorName = "Emmanouil Karystinaios"
+  site_url = "https://emmanouil-karystinaios.netlify.app"
+  title = "Post RSS Feed"
+  rssDescription = "My Posts RSS Feed"
+  categories = ['Technology', 'JAMstack', 'Web Development']
